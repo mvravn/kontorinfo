@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./bootstrap.min.css"> -->
     <title>Kontorinfo</title>
     <style>
@@ -64,62 +65,6 @@
             font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
         }
     </style>
-
-    <script>
-        /* var birthdays = [
-            { "name": "Michael T.", "bdate": "02-01-1980" },
-            { "name": "Charlotte", "bdate": "25-01-1982" },
-            { "name": "Lasse", "bdate": "27-01-1975" },
-            { "name": "Jakob T.", "bdate": "31-01-1991" },
-            { "name": "Tina", "bdate": "05-03-2001" },
-            { "name": "Thomas J.", "bdate": "13-04-1972" },
-            { "name": "John", "bdate": "17-05-1974" },
-            { "name": "Per", "bdate": "01-06-1959" },
-            { "name": "Mie S.", "bdate": "14-06-1999" },
-            { "name": "Jakob F.", "bdate": "28-06-1995" },
-            { "name": "May", "bdate": "03-07-1981" },
-            { "name": "Michael R.", "bdate": "17-07-1975" },
-            { "name": "Kim", "bdate": "17-07-1974" },
-            { "name": "Ture", "bdate": "25-08-1973" },
-            { "name": "Mie N.", "bdate": "31-08-1982" },
-            { "name": "Mads", "bdate": "06-09-1978" },
-            { "name": "Mette", "bdate": "28-09-1989" },
-            { "name": "Thomas L.", "bdate": "04-10-1969" },
-            { "name": "Thomas E.", "bdate": "19-11-1985" },
-            { "name": "Signe", "bdate": "24-11-1976" },
-            { "name": "Patrick", "bdate": "02-12-1984" },
-            { "name": "Carina", "bdate": "07-12-1983" },
-            { "name": "Nadja", "bdate": "21-12-1985" },
-            { "name": "Lars", "bdate": "25-12-1972" },
-            { "name": "Pernille", "bdate": "26-12-1991" }
-        ];
-
-        var d = new Date();
-        var month = checkTime(d.getMonth() + 1);
-        var day = checkTime(d.getDate());
-        var year = d.getFullYear();
-        var full = `${day}-${month}-${year}`
-        console.log(full);
-        console.log(birthdays[0].bdate); */
-
-        // ur-script, tyv-stjålet fra W3
-        function startTime() {
-            var today = new Date();
-            var h = today.getHours();
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('ur').innerHTML =
-                h + ":" + m;
-            var t = setTimeout(startTime, 500);
-        }
-        function checkTime(i) {
-            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-            return i;
-        }
-
-    </script>
 </head>
 
 <body onload="startTime()">
@@ -166,7 +111,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <p>Sprint 16: <span class="bad">56%</span></p>
+                                <p>Sprint 16: <span class="normal">56%</span></p>
                             </td>
                             <td>
                                 <p>Sprint 17: <span class="bad">42%</span></p>
@@ -186,7 +131,7 @@
                 <div class="card-block mx-auto pt-3">
                     <div class="card-block mx-auto pt-3">
                         <h5>Kommende Fødselsdage i Online: </h5>
-                        <p>Thomas J. - 13. april</p>
+                        <span id="bday"></span>
                         <!-- se hurra_listen.csv uden for denne folder -->
                     </div>
                 </div>
@@ -239,6 +184,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
