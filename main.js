@@ -1,104 +1,100 @@
 var birthdays = [
   {
     name: "Michael T.",
-    bdate: "02-01-1980"
+    bdate: "02-01-1980",
   },
   {
     name: "Charlotte",
-    bdate: "25-01-1982"
+    bdate: "25-01-1982",
   },
   {
     name: "Lasse",
-    bdate: "27-01-1975"
+    bdate: "27-01-1975",
   },
   {
     name: "Jakob T.",
-    bdate: "31-01-1991"
+    bdate: "31-01-1991",
   },
   {
     name: "Tina",
-    bdate: "05-03-2001"
+    bdate: "05-03-2001",
   },
   {
     name: "Thomas J.",
-    bdate: "13-04-1972"
+    bdate: "13-04-1972",
   },
   {
     name: "John",
-    bdate: "17-05-1974"
+    bdate: "17-05-1974",
   },
   {
     name: "Per",
-    bdate: "01-06-1959"
+    bdate: "01-06-1959",
   },
   {
     name: "Mie S.",
-    bdate: "14-06-1999"
+    bdate: "14-06-1999",
   },
   {
     name: "Jakob F.",
-    bdate: "28-06-1995"
-  },
-  {
-    name: "May",
-    bdate: "03-07-1981"
+    bdate: "28-06-1995",
   },
   {
     name: "Michael R.",
-    bdate: "17-07-1975"
+    bdate: "17-07-1975",
   },
   {
     name: "Kim",
-    bdate: "17-07-1974"
+    bdate: "17-07-1974",
   },
   {
     name: "Ture",
-    bdate: "25-08-1973"
+    bdate: "25-08-1973",
   },
   {
     name: "Mie N.",
-    bdate: "31-08-1982"
+    bdate: "31-08-1982",
   },
   {
     name: "Mads",
-    bdate: "06-09-1978"
+    bdate: "06-09-1978",
   },
   {
     name: "Mette",
-    bdate: "28-09-1989"
+    bdate: "28-09-1989",
   },
   {
     name: "Thomas L.",
-    bdate: "04-10-1969"
+    bdate: "04-10-1969",
   },
   {
     name: "Thomas E.",
-    bdate: "19-11-1985"
+    bdate: "19-11-1985",
   },
   {
     name: "Signe",
-    bdate: "24-11-1976"
+    bdate: "24-11-1976",
   },
   {
     name: "Patrick",
-    bdate: "02-12-1984"
+    bdate: "02-12-1984",
   },
   {
     name: "Carina",
-    bdate: "07-12-1983"
+    bdate: "07-12-1983",
   },
   {
     name: "Nadja",
-    bdate: "21-12-1985"
+    bdate: "21-12-1985",
   },
   {
     name: "Lars",
-    bdate: "25-12-1972"
+    bdate: "25-12-1972",
   },
   {
     name: "Pernille",
-    bdate: "26-12-1991"
-  }
+    bdate: "26-12-1991",
+  },
 ];
 
 // dato-hentning og formatering
