@@ -2,189 +2,189 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="./bootstrap.min.css"> -->
-    <title>Kontorinfo</title>
-    <style>
-        /* body {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="./bootstrap.min.css"> -->
+  <title>Kontorinfo</title>
+  <style>
+    /* body {
             font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
         } */
 
-        p {
-            font-size: 16px;
-            text-align: center;
-        }
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
 
-        h4 {
-            font-size: 350%;
-            font-weight: bold;
-        }
+    h4 {
+      font-size: 350%;
+      font-weight: bold;
+    }
 
-        h5 {
-            font-weight: bold;
-            font-size: 110%;
-            text-align: center;
-            margin: 0 0 15px 0;
-        }
+    h5 {
+      font-weight: bold;
+      font-size: 110%;
+      text-align: center;
+      margin: 0 0 15px 0;
+    }
 
-        td {
-            padding: 0px 14px;
-        }
+    td {
+      padding: 0px 14px;
+    }
 
-        table {
-            margin: 0 auto;
-        }
+    table {
+      margin: 0 auto;
+    }
 
-        .good {
-            color: green;
-        }
+    .good {
+      color: green;
+    }
 
-        .bad {
-            color: red;
-        }
+    .bad {
+      color: red;
+    }
 
-        .normal {
-            color: #1010ff;
-        }
+    .normal {
+      color: #1010ff;
+    }
 
-        .card {
-            -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
-            -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
-            box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
-        }
+    .card {
+      -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    }
 
-        .left {
-            text-align: left;
-        }
+    .left {
+      text-align: left;
+    }
 
-        #ur {
-            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        }
-    </style>
+    #ur {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+  </style>
 </head>
 
 <body onload="startTime()">
-    <div class="container">
-        <div class="card-deck mt-3">
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto py-3">
-                    <h2 class="overskrift">~ Online Infoside ~</h2>
-                </div>
-            </div>
+  <div class="container">
+    <div class="card-deck mt-3">
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto py-3">
+          <h2 class="overskrift">~ Online Infoside ~</h2>
         </div>
-        <div class="card-deck">
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-3">
-                    <h5>Sprint 23 Fokusområde: </h5>
-                    <p>Gaversider igen</p>
-                </div>
-            </div>
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-2 pb-1">
-                    <h4 id="ur"></h4>
-                </div>
-            </div>
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-3">
-                    <h5>Næste Deploy: </h5>
-                    <p>Sprint 23 - Uge 27</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-deck">
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-3">
-                    <h5>Deploy-tal: </h5>
-                    <table>
-                        <!-- KUN de deploy-relevante -->
-                        <tr>
-                            <td>
-                                <p>Sprint 14: <span class="good">60%</span></p>
-                            </td>
-                            <td>
-                                <p>Sprint 15: <span class="normal">60%</span></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Sprint 16: <span class="normal">56%</span></p>
-                            </td>
-                            <td>
-                                <p>Sprint 17: <span class="bad">42%</span></p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-3">
-                    <h5>CM-Deploy Rekord: </h5>
-                    <p>3. marts 2020 <br>3t42m før lukketid!</p>
-                    <!-- <p>3. marts 2020 kl. 12:48!</p> -->
-                </div>
-            </div>
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-3">
-                    <div class="card-block mx-auto pt-3">
-                        <h5>Kommende Fødselsdage i Online: </h5>
-                        <span id="bday"></span>
-                        <!-- se hurra_listen.csv uden for denne folder -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-deck">
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-3">
-                    <h5>Næste Morgenmøde: </h5>
-                    <p>24/6 via Teams</p>
-                </div>
-            </div>
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-3">
-                    <h5>Næste Kampagne: </h5>
-                    <p>15/6 - Fødselsdagsampagne</p>
-                    <!-- <p>7/9 - 5-Dages Kampagne</p> -->
-                </div>
-            </div>
-            <div class="card m-3 bg-light">
-                <div class="card-block mx-auto pt-3">
-                    <h5>Næste Prioriteringsmøde: </h5>
-                    <p>???</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-deck">
-            <div class="card m-3 bg-light">
-                <!-- <div class="card-block mx-auto pt-3"> -->
-                <div class="card-block pt-3">
-                    <h5>Kommende Arrangementer Med Personaleforeningen: </h5>
-                    <table>
-                        <tr>
-                            <td>
-                                <p>18/6</p>
-                            </td>
-                            <td>
-                                <p class="left">Ølsmagning på Skovlyst! - Fra 16:30-21:00</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p></p>
-                            </td>
-                            <td>
-                                <p class="left"></p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    <div class="card-deck">
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-3">
+          <h5>Sprint 23 Fokusområde: </h5>
+          <p>Hello Retail</p>
+        </div>
+      </div>
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-2 pb-1">
+          <h4 id="ur"></h4>
+        </div>
+      </div>
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-3">
+          <h5>Næste Deploy: </h5>
+          <p>Sprint 23 - Uge 27</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck">
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-3">
+          <h5>Deploy-tal: </h5>
+          <table>
+            <!-- KUN de deploy-relevante -->
+            <tr>
+              <td>
+                <p>Sprint 14: <span class="good">60%</span></p>
+              </td>
+              <td>
+                <p>Sprint 15: <span class="normal">60%</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Sprint 16: <span class="normal">56%</span></p>
+              </td>
+              <td>
+                <p>Sprint 17: <span class="bad">42%</span></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-3">
+          <h5>CM-Deploy Rekord: </h5>
+          <p>3. marts 2020 <br>3t42m før lukketid!</p>
+          <!-- <p>3. marts 2020 kl. 12:48!</p> -->
+        </div>
+      </div>
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-3">
+          <div class="card-block mx-auto pt-3">
+            <h5>Kommende Fødselsdage i Online: </h5>
+            <span id="bday"></span>
+            <!-- se hurra_listen.csv uden for denne folder -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck">
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-3">
+          <h5>Næste Morgenmøde: </h5>
+          <p>24/6 via Teams</p>
+        </div>
+      </div>
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-3">
+          <h5>Næste Kampagne: </h5>
+          <p>15/6 - Fødselsdagsampagne</p>
+          <!-- <p>7/9 - 5-Dages Kampagne</p> -->
+        </div>
+      </div>
+      <div class="card m-3 bg-light">
+        <div class="card-block mx-auto pt-3">
+          <h5>Næste Prioriteringsmøde: </h5>
+          <p>25/6 - 11:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck">
+      <div class="card m-3 bg-light">
+        <!-- <div class="card-block mx-auto pt-3"> -->
+        <div class="card-block pt-3">
+          <h5>Kommende Arrangementer Med Personaleforeningen: </h5>
+          <table>
+            <tr>
+              <td>
+                <p>18/6</p>
+              </td>
+              <td>
+                <p class="left">Ølsmagning på Skovlyst! - Fra 16:30-21:00</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p></p>
+              </td>
+              <td>
+                <p class="left"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
