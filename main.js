@@ -97,6 +97,41 @@ var birthdays = [
   },
 ];
 
+// Sprints
+// Kig evt. i tid.js for at finde time
+var sprints = [
+  {
+    name: "Sprint 22 - Uge 24",
+    time: 123456789,
+    sdate: "25-05-2020",
+  },
+  {
+    name: "Sprint 23 - Uge 27",
+    time: 123456789,
+    sdate: "15-06-2020",
+  },
+  {
+    name: "Sprint 24 - Uge 32",
+    time: 1593986400000,
+    sdate: "06-07-2020",
+  },
+  {
+    name: "Sprint 25 - Uge 35",
+    time: 1597010400000,
+    sdate: "10-08-2020",
+  },
+  {
+    name: "Sprint 26 - Uge 38",
+    time: 1598824800000,
+    sdate: "31-08-2020",
+  },
+  {
+    name: "Sprint 27 - Uge 41",
+    time: 1600639200000,
+    sdate: "21-09-2020",
+  },
+];
+
 // dato-hentning og formatering
 var d = new Date();
 var month = checkTime(d.getMonth() + 1);
@@ -121,7 +156,7 @@ function getAar(a) {
 }
 
 // sammenlign og skriv
-function getNextTwo() {
+function getNextTwoBirthdays() {
   // variable for dato i dag der skal sammenlignes
   var todayDag = getDag(full);
   var todayMaaned = getMaaned(full);
@@ -151,7 +186,7 @@ function getNextTwo() {
         rund2 = true;
       }
 
-      // sæt det navne og datoer ind i card'et som et table med evt. farve
+      // sæt navne og datoer ind i card'et som et table med evt. farve
       document.getElementById("bday").innerHTML = `<table><tr ${
         rund1 ? 'class="bad"' : ""
       }><td class="left">${birthdays[i].name}</td><td>${getDag(
@@ -166,7 +201,36 @@ function getNextTwo() {
     }
   }
 }
-getNextTwo();
+getNextTwoBirthdays();
+
+// Næste sprint
+function getNextSprint() {
+  var todayDag = getDag(full);
+  var todayMaaned = getMaaned(full);
+  for (let i = 0; i < sprints.length; i++) {
+    // variable for hver kollegas dato der skal sammenlignes
+    var sprintDag = getDag(sprints[i].sdate);
+    var sprintMaaned = getMaaned(sprints[i].sdate);
+    // gå igennem birthdays én af gangen, er i dag mindre end eller lig med i's bdate, så skriv to navne og datoer og break
+    if (todayMaaned >= sprintMaaned && todayDag >= sprintDag) {
+      // indsæt sprint-info
+      document.getElementById("sprint").innerHTML = `${sprints[i].name}`;
+      // marker hvis der kun er én uge tilbage af sprint (deploy-uge)
+      var timeToNextSprint = sprints[i + 1].time - new Date().getTime();
+      // console.log(new Date().getTime());
+      // console.log(sprints[i + 1].time);
+      console.log(timeToNextSprint);
+      console.log("7 dage: ", 86400000 * 7);
+
+      if (timeToNextSprint < 86400000 * 7) {
+        document.getElementById("sprint-card").className = "card m-3 warning";
+        document.getElementById("nextDeploy").innerHTML = "Deploy i Denne Uge!";
+      }
+      break;
+    }
+  }
+}
+getNextSprint();
 
 // ur-script, tyv-stjålet fra W3
 function startTime() {
