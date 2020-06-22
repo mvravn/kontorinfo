@@ -222,6 +222,12 @@ function getNextSprint() {
       console.log(timeToNextSprint);
       console.log("7 dage: ", 86400000 * 7);
 
+      if (timeToNextSprint < 86400000 * 14) {
+        document.getElementById("sprint-card").className =
+          "card m-3 prewarning";
+        document.getElementById("nextDeploy").innerHTML = "Deploy i Næste Uge";
+      }
+
       if (timeToNextSprint < 86400000 * 7) {
         document.getElementById("sprint-card").className = "card m-3 warning";
         document.getElementById("nextDeploy").innerHTML = "Deploy i Denne Uge!";
