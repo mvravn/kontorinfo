@@ -98,7 +98,7 @@ var birthdays = [
 ];
 
 // Sprints
-// Kig evt. i tid.js for at finde time
+// Kig evt. i tid.js for at finde/lave time
 var sprints = [
   {
     name: "Sprint 22 - Uge 24",
@@ -165,7 +165,7 @@ function getNextTwoBirthdays() {
     // variable for hver kollegas dato der skal sammenlignes
     var birthdaysDag = getDag(birthdays[i].bdate);
     var birthdaysMaaned = getMaaned(birthdays[i].bdate);
-    var birthdaysAar = getAar(birthdays[i].bdate);
+    // var birthdaysAar = getAar(birthdays[i].bdate);
     // gå igennem birthdays én af gangen, er i dag mindre end eller lig med i's bdate, så skriv to navne og datoer og break
     if (todayMaaned <= birthdaysMaaned && todayDag <= birthdaysDag) {
       // sørg for at den kan håndtere enden på arrayet
@@ -205,22 +205,25 @@ getNextTwoBirthdays();
 
 // Næste sprint
 function getNextSprint() {
-  var todayDag = getDag(full);
-  var todayMaaned = getMaaned(full);
+  // var todayDag = getDag(full);
+  // var todayMaaned = getMaaned(full);
   for (let i = 0; i < sprints.length; i++) {
     // variable for hver kollegas dato der skal sammenlignes
-    var sprintDag = getDag(sprints[i].sdate);
-    var sprintMaaned = getMaaned(sprints[i].sdate);
-    // gå igennem birthdays én af gangen, er i dag mindre end eller lig med i's bdate, så skriv to navne og datoer og break
-    if (todayMaaned >= sprintMaaned && todayDag >= sprintDag) {
-      // indsæt sprint-info
-      document.getElementById("sprint").innerHTML = `${sprints[i].name}`;
+    // var sprintDag = getDag(sprints[i].sdate);
+    // var sprintMaaned = getMaaned(sprints[i].sdate);
+
+    // Find i for næste sprint, regn tilbage derfra
+    if (new Date().getTime() <= sprints[i].time) {
+      // console.log("time: ", new Date().getTime());
+      // console.log(sprints[i].time);
+      // indsæt sprint-info for sprintet inden næste sprint, altså nuværende
+      document.getElementById("sprint").innerHTML = `${sprints[i - 1].name}`;
       // marker hvis der kun er én uge tilbage af sprint (deploy-uge)
-      var timeToNextSprint = sprints[i + 1].time - new Date().getTime();
+      var timeToNextSprint = sprints[i].time - new Date().getTime();
       // console.log(new Date().getTime());
       // console.log(sprints[i + 1].time);
-      console.log(timeToNextSprint);
-      console.log("7 dage: ", 86400000 * 7);
+      // console.log(timeToNextSprint);
+      // console.log("7 dage: ", 86400000 * 7);
 
       if (timeToNextSprint < 86400000 * 14) {
         document.getElementById("sprint-card").className =
