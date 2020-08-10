@@ -243,6 +243,8 @@ getNextSprint();
 
 // ur-script, tyv-stjålet fra W3
 function startTime() {
+  getNextSprint();
+  getNextTwoBirthdays();
   var today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
