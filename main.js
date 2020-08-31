@@ -51,10 +51,10 @@ var birthdays = [
     name: "Ture",
     bdate: "25-08-1973",
   },
-  {
-    name: "Mie N.",
-    bdate: "31-08-1982",
-  },
+  // { Fjernet, da Mie er MEGET lidt glad for opmærksomhed og alder
+  //   name: "Mie N.",
+  //   bdate: "31-08-1982",
+  // },
   {
     name: "Mads",
     bdate: "06-09-1978",
