@@ -59,10 +59,10 @@ var birthdays = [
     name: "Mads",
     bdate: "06-09-1978",
   },
-  {
-    name: "Mette",
-    bdate: "28-09-1989",
-  },
+  // {
+  //   name: "Mette",
+  //   bdate: "28-09-1989",
+  // },
   {
     name: "Thomas L.",
     bdate: "04-10-1969",
